@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>CITY</th>
+        <th>COUNTRY</th>
+        <th>PHONECODE</th>
+        <th>CAPITAL</th>
+        <th>POPULATION</th>
+    </tr>
+    <tr th:each="worldMap : ${worldMaps.getWorldMaps()}">
+        <td th:text="${worldMap.getID()}"></td>
+        <td th:text="${worldMap.getCity()}"></td>
+        <td th:text="${worldMap.getCountry()}"></td>
+        <td th:text="${worldMap.getPhonecode()}"></td>
+        <td th:text="${worldMap.getCapital()}"></td>
+        <td th:text="${worldMap.getPopulation()}"></td>
+    </tr>
+</table>
+</body>
+</html>
